@@ -1,11 +1,10 @@
-#towel_pattern = ["r", "wr", "b", "g", "bwu", "rb", "gb", "br" ]
 _pattern_memo = {
 
 }
 
 def towelPatternExists(pattern):
     global _pattern_memo
-    print(pattern)
+    #print(pattern)
     if pattern == "":
         return True
     if pattern in towel_pattern:
@@ -25,11 +24,11 @@ def towelPatternExists(pattern):
     _pattern_memo[pattern] = False
     return False
 
-with open('c:\\Users\Alex\Documents\Code\Python\\input2.txt', 'r') as file:
+with open('input2.txt', 'r') as file:
     lines = file.readlines()
 
 towel_pattern = lines[0].rstrip().split(", ")
-print(towel_pattern)
+#print(towel_pattern)
 num_patterns = 0
 for patterns in lines[2:]:
     if( towelPatternExists(patterns.rstrip()) ):
